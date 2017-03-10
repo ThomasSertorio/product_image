@@ -1,0 +1,10 @@
+<%= @product.name %>
+
+<div>
+  <% @product.images.each do |image| %>
+    <%= cl_image_tag image.path, width: 300, height: 200, crop: :fill %>
+  <% end %>
+</div>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
